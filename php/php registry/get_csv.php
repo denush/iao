@@ -1,0 +1,32 @@
+<?php 
+
+	if (isset($_SERVER['HTTP_ORIGIN'])) {
+		header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+		header('Access-Control-Allow-Credentials: true');
+		header('Access-Control-Max-Age: 86400');    // cache for 1 day
+	}
+	if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+		if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+			header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");         
+
+		if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+			header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+	}
+
+	session_start();
+
+	if(isset($_SESSION['in_work']) && $_SESSION['in_work'])
+	{
+		
+	} else 
+	{
+		if(isset($_SESSION['csv']) && $_SESSION['csv'])
+		{
+			//header('Content-Type: text/csv; charset=w', true);
+			header('Content-Disposition: attachment; filename=' . $_SESSION['csv_name']); 
+			echo $_SESSION['csv'];
+			//$_SESSION['csv'] = null;
+		}		
+	}
+
+?>

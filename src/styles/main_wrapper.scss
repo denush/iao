@@ -1,0 +1,7 @@
+@import './constants.scss';
+
+.main-wrapper {
+	margin: auto;
+	max-width: $main-wrapper-width;
+	padding: $main-wrapper-padding;
+}

@@ -1,25 +1,50 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHashHistory } from 'vue-router';
+import store from '@/store';
+
+import MainComponent from '@/components/MainComponent';
+import LoginComponent from '@/components/LoginComponent';
+
+import DataReestr from '@/components/DataReestr';
+import LoadFile from '@/components/LoadFile';
+import TempTables from '@/components/TempTables';
+import CurrentTempTable from '@/components/CurrentTempTable';
 
 const routes = [
   {
+    name: 'main',
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: { name: 'load' },
+    component: MainComponent,
+    meta: { requiresAuth: true },
+    children: [
+      { name: 'journal', path: 'journal', component: DataReestr },
+      { name: 'load', path: 'load', component: LoadFile },
+      { name: 'temp-tables', path: 'temp-tables', component: TempTables },
+      { name: 'temp-table', path: 'temp-table/:table_id', component: CurrentTempTable }
+    ]
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+
+  { name: 'login', path: '/login', component: LoginComponent },
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes
-})
+});
 
-export default router
+router.beforeEach(async (to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (await store.dispatch('auth/checkLogin')) {
+      if (!store.state.auth.user) {
+        await store.dispatch('auth/getUserInfo');
+      }
+      next();
+    } else {
+      next({ name: 'login' });
+    }
+  } else {
+    next();
+  }
+});
+
+export default router;

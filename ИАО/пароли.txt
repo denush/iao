@@ -1,0 +1,9 @@
+172.26.24.104
+
+пароль на саму систему
+user
+Byaj-01
+
+postgres
+Pjataevas_to_iao
+

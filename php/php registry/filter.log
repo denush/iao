@@ -1,0 +1,63 @@
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.03.2019','10.04.2019',1, 1, false) where (forest_composition ilike 'б%') order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('08.04.2019','10.04.2019',1, 1, false) where (forest_composition ilike '%10с%' o) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) where (forest_composition ilike '%10с%') order by forestry
+SELECT DISTINCT(area) FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) where (forestry='Азнакаевское') and (forest_composition ilike '%10с%') order by area
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(localforestry) FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) order by localforestry
+SELECT DISTINCT(localforestry) FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) order by localforestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(subforestry) FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) where (forestry='Абатское' or forestry='Большесельское' or forestry='Большеуковское') order by subforestry
+SELECT DISTINCT(subforestry) FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) where (forestry='Абатское' or forestry='Большесельское' or forestry='Большеуковское') order by subforestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) where (subforestry='Коневское СП' or subforestry='Майское СП') order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.02.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.02.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.02.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.02.2019','10.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(localforestry) FROM czl_get_registry('01.10.2018','10.04.2019',1, 1, false) order by localforestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('10.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('09.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('09.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(localforestry) FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) order by localforestry
+SELECT DISTINCT(localforestry) FROM czl_get_registry('01.03.2019','11.04.2019',1, 1, false) order by localforestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('09.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) order by forestry
+SELECT DISTINCT(localforestry) FROM czl_get_registry('01.01.2018','11.04.2019',1, 1, false) order by localforestry
+SELECT DISTINCT(localforestry) FROM czl_get_registry('01.01.2018','11.04.2019',1, 1, false) order by localforestry
+SELECT DISTINCT(localforestry) FROM czl_get_registry('01.01.2018','11.04.2019',1, 1, false) order by localforestry
+SELECT DISTINCT(localforestry) FROM czl_get_registry('01.01.2018','11.04.2019',1, 1, false) order by localforestry
+SELECT DISTINCT(forestry) FROM czl_get_registry('01.01.2018','11.04.2019',1, 1, false) where (localforestry='Алтайское' or localforestry='Алтанское' or localforestry='Яркинское' or localforestry='Ярковское сельское') order by forestry
+SELECT DISTINCT(localforestry) FROM czl_get_registry('01.01.2018','11.04.2019',1, 1, false) order by localforestry
+SELECT DISTINCT(subforestry) FROM czl_get_registry('01.01.2018','11.04.2019',1, 1, false) where (localforestry='Алтайское' or localforestry='Алтанское' or localforestry='Яркинское' or localforestry='Ярковское сельское') order by subforestry

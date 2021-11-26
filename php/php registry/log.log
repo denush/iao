@@ -1,0 +1,59 @@
+SELECT * FROM czl_get_registry('08.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('08.04.2019','10.04.2019',1, 1, false) where (forest_composition ilike '%2510%D1%81%25') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('08.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('08.04.2019','10.04.2019',1, 1, false) where (forest_composition ilike '%10с%') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) where s >= 999999 limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('08.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) where (forestry='Васисское' or forestry='Саргатское') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) where (localforestry='Большекулачинское' or localforestry='Гагаринское' or localforestry='Колосовское сельское' or localforestry='Красноярское' or localforestry='Крутинское сельское' or localforestry='Пихтовское' or localforestry='Северное' or localforestry='Солдатское' or localforestry='Солдатское сельское' or localforestry='Тарское' or localforestry='Тюкалинское' or localforestry='Тюкалинское сельское') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) where (forestry='Абатское' or forestry='Большесельское' or forestry='Большеуковское') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) where (forestry='Абатское' or forestry='Большесельское' or forestry='Большеуковское') and (subforestry='Коневское СП' or subforestry='Майское СП') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','10.04.2019',1, 1, false) where (forestry='Кизлярское' or forestry='Тляратинское') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.02.2019','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.02.2019','10.04.2019',1, 1, false) where (forestry='Абанское' or forestry='Варгашинское') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.10.2018','10.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('10.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('09.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('09.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('08.04.2019','08.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('08.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.03.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('11.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('09.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) where (forestry='Яренское' or forestry='Ярковское') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) where (forestry='Лабинское' or forestry='Табасаранское') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.04.2019','11.04.2019',1, 1, false) where (forestry='Лабинское' or forestry='Табасаранское') limit 50 offset 51-1
+SELECT * FROM czl_get_registry('01.01.2018','11.04.2019',1, 1, false) limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.01.2018','11.04.2019',1, 1, false) where (localforestry='Яркинское' or localforestry='Ярковское сельское') limit 50 offset 1-1
+SELECT * FROM czl_get_registry('01.01.2018','11.04.2019',1, 1, false) where (localforestry='Алтайское' or localforestry='Алтанское' or localforestry='Яркинское' or localforestry='Ярковское сельское') limit 50 offset 1-1
