@@ -9,13 +9,13 @@
 			>
 				Журнал
 			</div>
-			<div
+			<!-- <div
 				@click='linkTo(link_load)'
 				class='navbar__item'
 				:class='{ "navbar__item--selected": isSelected(link_load) }'
 			>
 				Загрузка
-			</div>
+			</div> -->
 
 			<div
 				@click='linkTo(link_tempTables)'

@@ -1,27 +1,4 @@
 <template>
-<!-- 	<p-table
-		:value='formedTempTableList'
-		row-hover
-	
-		:row-class='() => "file-table__row"'
-		class='file-table p-datatable-sm'
-	>
-		<template #empty>
-			Таблицы не загружены
-		</template>
-
-		<p-column field='file_name' header='Название файла'/>
-		<p-column field='create_date' header='Дата загрузки'/>
-		<p-column field='name' header='Дата последнего редактирования'/>
-
-		<p-column>
-			<template #body='slotScope'>
-				<p-button @click='goToTable(slotScope)' icon='fa fa-sign-in-alt' class='p-button-rounded p-button-sm p-mr-2'/>
-				<p-button @click='removeTable(slotScope)' icon='fa fa-trash' class='p-button-rounded p-button-sm p-button-danger'/>
-			</template>
-		</p-column>
-	</p-table> -->
-
 	<table class='table-temp-list'>
 		<thead>
 			<tr>
@@ -43,6 +20,16 @@
 					<p-button @click='removeTable(table)' icon='fa fa-trash' class='p-button-rounded p-button-sm p-button-danger'/>
 				</td>
 			</tr>
+			<tr v-for='(table, table_i) in formedTableListForestries' :key='table.tmp_tab_id'>
+				<td class='table-temp-list__table-num-column-forestries'>{{ table_i + 1 }}</td>
+				<td>{{ table.file_name }}</td>
+				<td>{{ formatDate(table.create_date) }}</td>
+				<td>{{ table.last_edit_date }}</td>
+				<td>
+					<p-button @click='goToTableForestries(table)' icon='fa fa-sign-in-alt' class='p-button-rounded p-button-sm p-mr-2'/>
+					<p-button @click='removeTableForestries(table)' icon='fa fa-trash' class='p-button-rounded p-button-sm p-button-danger'/>
+				</td>
+			</tr>
 		</tbody>
 	</table>
 </template>
@@ -51,7 +38,6 @@
 	import { computed } from 'vue';
 	import { useStore } from 'vuex';
 	import { useRouter } from 'vue-router';
-	import { mapState, mapActions } from 'vuex';
 
 	export default {
 		name: 'TempTablesList',
@@ -83,9 +69,32 @@
 				});
 			};
 
+			const tableListForestries = computed(() => store.state.tempTables.tempTableListForestries);
+			const formedTableListForestries = computed(() => {
+				return tableListForestries.value.filter(table => {
+					return table.status_id !== '3';
+				});
+			});
+
 			const formatDate = unformatted => {
 				const date = new Date(unformatted);
 				return date.toLocaleString();
+			};
+
+			const goToTableForestries = table => {
+				const route_obj = {
+					name: 'temp-table-forestries',
+					params: {
+						table_id: table.tmp_tab_id
+					}
+				};
+				router.push(route_obj);
+			};
+
+			const removeTableForestries = table => {
+				return store.dispatch('tempTables/removeTempTableForestries', table.tmp_tab_id).then(res => {
+					return store.dispatch('tempTables/getTempTableListForestries');
+				});
 			};
 
 			return {
@@ -93,7 +102,13 @@
 				formedTableList,
 				goToTable,
 				removeTable,
-				formatDate
+
+				tableListForestries,
+				formedTableListForestries,
+				goToTableForestries,
+				removeTableForestries,
+
+				formatDate,
 			};
 		}
 
@@ -115,10 +130,6 @@
 		color: #3e4750;
 	}
 
-	.table-temp-list tbody tr {
-		/*border: 1px solid gray;*/
-	}
-
 	.table-temp-list tbody tr td {
 		background-color: white;
 		padding: 0.5rem 1rem;
@@ -129,6 +140,13 @@
 	.table-temp-list__table-num-column {
 		background-color: #142739 !important;
 		color: #dee7f2 !important;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.table-temp-list__table-num-column-forestries {
+		background-color: #257737 !important;
+		color: #dbdfde !important;
 		font-weight: bold;
 		text-align: center;
 	}

@@ -8,19 +8,21 @@ import DataReestr from '@/components/DataReestr';
 import LoadFile from '@/components/LoadFile';
 import TempTables from '@/components/TempTables';
 import CurrentTempTable from '@/components/CurrentTempTable';
+import CurrentTempTableForestries from '@/components/CurrentTempTableForestries';
 
 const routes = [
   {
     name: 'main',
     path: '/',
-    redirect: { name: 'load' },
+    redirect: { name: 'temp-tables' },
     component: MainComponent,
     meta: { requiresAuth: true },
     children: [
       { name: 'journal', path: 'journal', component: DataReestr },
       { name: 'load', path: 'load', component: LoadFile },
       { name: 'temp-tables', path: 'temp-tables', component: TempTables },
-      { name: 'temp-table', path: 'temp-table/:table_id', component: CurrentTempTable }
+      { name: 'temp-table', path: 'temp-table/:table_id', component: CurrentTempTable },
+      { name: 'temp-table-forestries', path: 'temp-table-forestries/:table_id', component: CurrentTempTableForestries }
     ]
   },
 

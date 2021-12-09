@@ -1,8 +1,6 @@
 <template>
 	<div class='reestr-data'>
-		<div>
-			<button>test</button>
-		</div>
+		<DataReestrToolbar/>
 
 		<div class='reestr-data__flex-container'>
 			<DataReestrTable/>
@@ -21,12 +19,14 @@
 	import { computed } from 'vue';
 	import { useStore } from 'vuex';
 
+	import DataReestrToolbar from './DataReestr__toolbar';
 	import DataReestrTable from './DataReestr__table';
 
 	export default {
 	  name: 'FileLoader',
 
 	  components: {
+	  	DataReestrToolbar,
 	  	DataReestrTable
 	  },
 

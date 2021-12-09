@@ -7,15 +7,10 @@
 
 			<p-button label='Выгрузить строки с ошибками' @click='downloadErrorRows' :loading='isErrorsDownloading' class='p-button-sm p-mr-2'/>
 
-			<p-button label='Выгрузить корректные строки в реестр' @click='moveTempTableToReestr' :loading='tempTableMovingToReestr' class='p-button-sm'/>
-			<!-- <p-button label='get checked rows' @click='getCheckedRowList' class='p-button-sm p-ml-2'/> -->
-			<!-- <p-button label='get incorrect rows' @click='getIncorrectRowList' class='p-button-sm p-ml-2'/> -->
-			<!-- <p-button label='show json' @click='showJson' class='p-button-sm p-ml-2'/> -->
-			<!-- <p-button label='log filter' @click='logFilter' class='p-button-sm p-ml-2'/> -->
-			<!-- <p-button label='reset checked' @click='resetAllChecked' class='p-button-sm p-ml-2'/> -->
+			<!-- <p-button label='Выгрузить корректные строки в реестр' @click='moveTempTableToReestr' :loading='tempTableMovingToReestr' class='p-button-sm'/> -->
 		</div>
 
-		<div class='toolbar__right'>
+		<!-- <div class='toolbar__right'>
 			<div class='toolbar__adress-switch-block'>
 				<p-switch :modelValue='addressAtStart' @update:modelValue='addressAtStartChanged'/>
 				<span class='toolbar__label'>Адрес в начале</span>
@@ -24,7 +19,7 @@
 				<p-switch :modelValue='filterOnlyIncorrect' @update:modelValue='filterOnlyIncorrectChanged'/>
 				<span class='toolbar__label'>Только некорректные</span>
 			</div>
-		</div>
+		</div> -->
 
 	</div>
 </template>
@@ -36,7 +31,7 @@
 
 	import tempTableTemplate from '@/lib/tempTableTemplate';
 
-	const FORM_ERRORS = process.env.VUE_APP_ROOT_API + 'download_error_rows/index.php';
+	const FORM_ERRORS = process.env.VUE_APP_ROOT_API + 'download_error_rows/forestries.php';
 
 	export default {
 		name: 'CurrentTempTableToolbar',
@@ -49,8 +44,8 @@
 			const tempTableMovingToReestr = computed(() => store.state.currentTempTable.tempTableMovingToReestr);
 
 			const moveTempTableToReestr = () => {
-				return store.dispatch('currentTempTable/MOVE_TEMP_TABLE_TO_REESTR').finally(() => {
-					return store.dispatch('currentTempTable/getTempTable');
+				return store.dispatch('currentTempTableForestries/MOVE_TEMP_TABLE_TO_REESTR').finally(() => {
+					return store.dispatch('currentTempTableForestries/getTempTable');
 				});
 			};
 
@@ -68,13 +63,13 @@
 		},
 
 		computed: {
-			...mapState('currentTempTable', {
+			...mapState('currentTempTableForestries', {
 				tempTableId:  state => state.tempTableId,
 				tempTableTemplateIsLoading: state => state.tempTableTemplateIsLoading,
 				tempTableVerifying: state => state.tempTableVerifying,
 			}),
 
-			...mapGetters('currentTempTable', [
+			...mapGetters('currentTempTableForestries', [
 				'tempTableFilterStr'
 			]),
 
@@ -176,7 +171,7 @@
 			},
 
 			
-			...mapActions('currentTempTable', [
+			...mapActions('currentTempTableForestries', [
 				'saveTempTableData',
 				'getTempTable',
 				'verifyTempTable',

@@ -139,7 +139,6 @@
 
 	  		if (!user_id) {
 	  			throw new Error('LOAD_FILE_NO_USER_ID');
-	  			return;
 	  		}
 
 	  		const form = new FormData();

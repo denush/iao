@@ -27,14 +27,12 @@ $sheet = $spreadsheet->getActiveSheet();
 
 $temp_table_id = $_POST['table_id'];
 
-
-
 // while ($row = pg_fetch_assoc($result)) {
 // 	$temp_table_template[] = $row;
 // }
 
 // Получение шаблона временной таблицы
-$query = "SELECT * from sys_fields_list  order by field_num";
+$query = "SELECT * from sys_fields_list_forestries order by field_num";
 $result = pg_query($dbconn, $query) or die('Ошибка запроса: ' . pg_last_error());
 
 $temp_table_template = [];
@@ -45,13 +43,16 @@ while ($row = pg_fetch_assoc($result)) {
 // Получение некорректных строк временной таблицы
 
 $incorrect_rows_filter = "(is_row_correct=''false'') and (is_row_checked=''true'')";
-$query = "SELECT * from czl_get_tmp_table('{$temp_table_id}', null, null, '{$incorrect_rows_filter}')";
+$query = "SELECT * from czl_get_tmp_table_forestries('{$temp_table_id}', null, null, '{$incorrect_rows_filter}')";
 $result = pg_query($dbconn, $query) or die('Ошибка запроса: ' . pg_last_error());
 
 $temp_table = [];
 while ($row = pg_fetch_assoc($result)) {
 	$temp_table[] = $row;
 }
+
+// echo json_encode($temp_table, JSON_UNESCAPED_UNICODE);
+// exit;
 
 $row = 1;
 
@@ -94,6 +95,10 @@ foreach ($temp_table as $temp_table_row) {
 
 		$column_name = get_column_name($i);
 
+    if (!isset($temp_table_row[$temp_table_column['field']])) {
+      continue;
+    }
+
 		$sheet->setCellValue($column_name.($row), $temp_table_row[$temp_table_column['field']]);
 
 		if (is_cell_incorrect($temp_table_row, $temp_table_column)) {
@@ -122,7 +127,7 @@ $xlsData = ob_get_contents();
 ob_end_clean();
 
 
-$query = "SELECT * from sys_logging_main where tmp_tab_id='{$temp_table_id}'";
+$query = "SELECT * from sys_logging_main_forestries where tmp_tab_id='{$temp_table_id}'";
 $result = pg_query($dbconn, $query) or die('Ошибка запроса: ' . pg_last_error());
 
 $temp_table_info = pg_fetch_assoc($result);

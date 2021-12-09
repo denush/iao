@@ -1,14 +1,14 @@
 <template>
 	<div class='temp-tables'>
 		<div class='temp-tables__content main-wrapper'>
-			<!-- <TempTablesLoader/> -->
+			<TempTablesLoader/>
 			<TempTablesList/>
 		</div>
 	</div>
 </template>
 
 <script>
-	import { mapActions } from 'vuex';
+	import { useStore } from 'vuex';
 
 	import TempTablesLoader from './TempTables__loader';
 	import TempTablesList from './TempTables__list';
@@ -21,14 +21,11 @@
 			TempTablesList
 		},
 
-		methods: {
-			...mapActions('tempTables', [
-				'getTempTableList'
-			])
-		},
+		setup() {
+			const store = useStore();
 
-		created() {
-			this.getTempTableList();
+			store.dispatch('tempTables/getTempTableList');
+			store.dispatch('tempTables/getTempTableListForestries');
 		}
 
 	};

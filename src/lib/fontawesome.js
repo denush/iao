@@ -30,6 +30,7 @@ import {
 	faTimes,
 	faTrash,
 	faUndo,
+	faUpload,
 	faVectorSquare
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -57,6 +58,7 @@ library.add(
 	faTimes,
 	faTrash,
 	faUndo,
+	faUpload,
 	faVectorSquare
 );
 
