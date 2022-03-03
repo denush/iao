@@ -51,9 +51,6 @@ while ($row = pg_fetch_assoc($result)) {
 	$temp_table[] = $row;
 }
 
-// echo json_encode($temp_table, JSON_UNESCAPED_UNICODE);
-// exit;
-
 $row = 1;
 
 $letters = range('a', 'z');
@@ -153,10 +150,12 @@ $file_name = ($temp_table_file_name ? $temp_table_file_name : 'errors') . '.xlsx
 // $file_name = 'errors';
 $file_content = 'data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,'.base64_encode($xlsData);
 
-$response = array(
-  'name' => $file_name,
-  'file' => $file_content
-);
+// $response = array(
+//   'name' => $file_name,
+//   'file' => $file_content
+// );
+
+$response = 'done';
 
 echo json_encode($response);
 pg_close($dbconn);

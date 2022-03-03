@@ -27,8 +27,6 @@ $sheet = $spreadsheet->getActiveSheet();
 
 $temp_table_id = $_POST['table_id'];
 
-
-
 // while ($row = pg_fetch_assoc($result)) {
 // 	$temp_table_template[] = $row;
 // }

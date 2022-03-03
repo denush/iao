@@ -1,5 +1,9 @@
 {
     "require": {
-        "phpoffice/phpspreadsheet": "^1.18"
+        "phpoffice/phpspreadsheet": "^1.18",
+        "cache/simple-cache-bridge": "^1.1",
+        "cache/apcu-adapter": "^1.1",
+        "cache/redis-adapter": "^1.1",
+        "mk-j/php_xlsxwriter": "^0.38.0"
     }
 }

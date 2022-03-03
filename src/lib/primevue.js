@@ -23,6 +23,7 @@ import POverlayPanel from 'primevue/overlaypanel';
 import PPaginator from 'primevue/paginator';
 import PPanel from 'primevue/panel';
 // import PSidebar from 'primevue/sidebar';
+import PRadioButton from 'primevue/radiobutton';
 import PSpinner from 'primevue/progressspinner';
 import PSplitButton from 'primevue/splitbutton';
 import PTable from 'primevue/datatable';
@@ -48,6 +49,7 @@ function registerPrimeVue(app) {
 	app.component('POverlayPanel', POverlayPanel);
 	app.component('PPaginator', PPaginator);
 	// app.component('PSidebar', PSidebar);
+	app.component('PRadioButton', PRadioButton);
 	app.component('PPanel', PPanel);
 	app.component('PSpinner', PSpinner);
 	app.component('PSplitButton', PSplitButton);
