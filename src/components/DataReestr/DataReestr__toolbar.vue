@@ -9,7 +9,12 @@
 			/>
 		</div>
 
-		<FormReestrModal :isOpen='formReestrModalIsOpen' @toggle-open='toggleFormReestrModal'/>
+		<FormReestrModal
+			:isOpen='formReestrModalIsOpen'
+			@toggle-open='toggleFormReestrModal'
+			@start-download='isReestrDownloading = true'
+			@finish-download='isReestrDownloading = false'
+		/>
 
 	</div>
 </template>
@@ -37,10 +42,7 @@
 			};
 
 			const downloadReestr = () => {
-
 				toggleFormReestrModal(true);
-
-				console.log('lala lala lala');
 				return;
 
 

@@ -14,7 +14,13 @@ require_once '../vendor/autoload.php';
 $region_id = $_POST['region_id'];
 
 // Получение таблицы реестра УПП
-$query = "SELECT * from czl_get_app_1_1_from_main_iao({$region_id}, true)"; // true - включить в таблицу строку "итого"
+if ($region_id === '0') {
+  $query = "SELECT * from czl_get_app_1_1_from_main_iao(true)"; // true - включить в таблицу строку "итого"
+} else {
+  $query = "SELECT * from czl_get_app_1_1_from_main_iao({$region_id}, true)"; // true - включить в таблицу строку "итого"
+}
+
+// $query = "SELECT * from czl_get_app_1_1_from_main_iao({$region_id}, true)"; // true - включить в таблицу строку "итого"
 $result = pg_query($dbconn, $query) or die('Ошибка запроса: ' . pg_last_error());
 
 $table_upp = [];
